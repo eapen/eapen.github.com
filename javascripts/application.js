@@ -78,14 +78,6 @@ $(document).ready(function(){
 		return false;
 	});
 	
-	// Toasty!
-	$("#mre").mouseover(function(){
-		$.sound.play('http://www.leedberg.com/MotaroFTP/sounds/toasty.wav');
-		$("#me").animate({left:0}, 100);
-	}).mouseleave(function(){
-		$("#me").animate({left:-292}, 100);
-	})
-	
 	TwitterAPI.Statuses.user_timeline("twEapen", function(json, status){
 		var content = "";
 		$.each(json, function(i){
